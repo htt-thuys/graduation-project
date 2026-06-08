@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Project specific folders (Data & Checkpoints & Logs)
+outputs/
+test_data/
+test_output/
+/data/
+/dataset/
+/raw_dataset/
+/processed_dataset/
+
+# Large model files
+*.pth
+*.pt
+*.onnx
+*.h5
+*.weights
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
