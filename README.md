@@ -21,8 +21,7 @@ Trong phiên bản codebase mới này, toàn bộ quá trình nghiên cứu tr�
 
 ```text
 codebase/
-├── configs/                # Cấu hình dự án (JSON/YAML)
-├── notebooks/              # Jupyter Notebooks nghiên cứu
+├── configs/                # Cấu hình dự án
 ├── outputs/                # Nơi lưu kết quả
 │   ├── checkpoints/        # Model weights (.pth)
 │   ├── figures/            # Đồ thị, Heatmap, t-SNE
@@ -37,7 +36,7 @@ codebase/
 │   │   ├── backbone.py     # Định nghĩa kiến trúc mô hình
 │   │   └── losses.py       # Loss function
 │   └── utils/              # Các hàm dùng chung
-└── tools/                  # Script chạy chính (entry points)
+└── tools/                  # Script chạy chính 
     ├── train_stage1.py
     ├── train_stage2.py
     └── evaluate.py
