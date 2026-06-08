@@ -97,15 +97,12 @@ Chạy lần lượt các script theo thứ tự sau để tái lập lại toà
 # 1. Tiền xử lý dữ liệu
 python src/data/preprocess.py --input /path/to/raw_dataset --output /path/to/processed_dataset
 
-# 2. Stage 1 - SupCon Pretraining (VD: dùng DenseNet121)
+# 2. Stage 1 - SupCon Pretraining 
 python tools/train_stage1.py --backbone densenet121 --train-dir /path/to/processed_dataset/train --out-dir outputs/stage1
 
-# 3. Stage 2 - Classifier Fine-tuning
+# 3. Stage 2 - Linear Classifier
 python tools/train_stage2.py --backbone densenet121 --s1-dir outputs/stage1 --train-dir /path/to/processed_dataset/train --val-dir /path/to/processed_dataset/val --out-dir outputs/stage2
 
 # 4. Đánh giá trên tập test
 python tools/evaluate.py --backbone densenet121 --s2-dir outputs/stage2 --test-dir /path/to/processed_dataset/test --out-dir outputs/eval
-
-# 5. Chạy Local Test (Để xác nhận codebase hoạt động tốt)
-python scripts/test_local.py
 ```
